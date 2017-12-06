@@ -1,8 +1,11 @@
 import pygame
+from settings import Settings
+
 pygame.init()
 pygame.mixer.init()
-size = [900, 600]
-screen = pygame.display.set_mode(size)
+ai_settings=Settings()
+screen =  pygame.display.set_mode(
+    (ai_settings.screen_width, ai_settings.screen_height))
 pygame.display.set_caption( "Xena Vs. Shanti: Space Lady Showdown")
 pygame.mixer.music.load("music/Aaliyah.mp3")
 pygame.mixer.music.play(0)
